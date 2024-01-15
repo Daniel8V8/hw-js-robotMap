@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROBOT MAP </title>
+  </head>
+  <body style="font-family: monospace; line-height: 9px;">
+    <script>
+      // the map of a room 10 x10m
+      // rx, ry = coord of vacuum cleaner robot
+      // sx, sy = coord of charging station
+      // . . . . . . . . . .
+      // . . . . . . . . . .
+      // . . . . . . . . . .
+      // . . . . R . . . . .
+      // . . . . . . . . . .
+      // . . . . . . . . . .
+      // . . . . . . . . . .
+      // . . . . . . . . . .
+      // . . . . . . . . . .
+      // . . . . . . . . . S <---- hw: add 2 new coordonates like sx & sy - (charge station) & print leter "S" on map
+
+      let rx = 5;
+      let ry = 5;
+      let sx = 10;
+      let sy = 8;
+
+      // ############ line x10 #############
+      for (let y = 1; y <= 10; y++) {
+        // ############ dots x10 #############
+        for (let x = 1; x <= 10; x++) {
+
+          if (x == rx && y == ry) {
+            document.write(`R`);
+
+          } else if (x == sx && y == sy) {
+            document.write(`S`);
+
+          } else {
+            document.write(`.`);
+          }
+        }
+        document.write(`<br>`);
+        // ######### dots x10 #############
+      }
+      // ############ line x10 #############
+    </script>
+  </body>
+</html>
